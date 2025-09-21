@@ -101,7 +101,7 @@ CREATE TABLE fact_sales (
     FOREIGN KEY (ProductID) REFERENCES dim_products(ProductID),
     FOREIGN KEY (DateID) REFERENCES dim_date(DateID)
 );
-
+Voiçi le lien si vous voulez télécharger la base de données sur ma branche Master : https://github.com/youssefhamm/Projet-Analyse-de-donnees-Ecommerce/blob/master/dwh_ecommerce.sql
 4️⃣ Visualisation avec Power BI
 a) Connexion
 
