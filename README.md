@@ -7,7 +7,7 @@ Auteur : Youssef HAMMOUJAN
 Période du dataset : Décembre 2010 – Décembre 2011
 Outils utilisés : Talend Open Studio, PostgreSQL, Power BI
 
-1️⃣ Source de données
+# 1️⃣ Source de données
 
 Dataset : Online Retail Dataset (Kaggle)
 
@@ -39,7 +39,8 @@ Duplications
 
 Incohérences (quantités négatives = retours produits)
 
-2️⃣ Processus ETL avec Talend
+# 2️⃣ Processus ETL avec Talend
+
 a) Extraction
 
 Lecture du fichier brut CSV via tFileInputDelimited.
@@ -64,7 +65,8 @@ c) Chargement
 
 Ordre d’exécution : dimensions d’abord (dim_customers, dim_products, dim_date), puis fact_sales.
 
-3️⃣ Data Warehouse (PostgreSQL)
+# 3️⃣ Data Warehouse (PostgreSQL)
+
 Modèle en étoile
 
 Table de faits : fact_sales
@@ -102,7 +104,9 @@ CREATE TABLE fact_sales (
     FOREIGN KEY (DateID) REFERENCES dim_date(DateID)
 );
 Voiçi le lien si vous voulez télécharger la base de données sur ma branche Master : https://github.com/youssefhamm/Projet-Analyse-de-donnees-Ecommerce/blob/master/dwh_ecommerce.sql
-4️⃣ Visualisation avec Power BI
+
+# 4️⃣ Visualisation avec Power BI
+
 a) Connexion
 
 Connexion directe à PostgreSQL (localhost:5432).
@@ -149,7 +153,7 @@ Top Produits : bar chart horizontal avec CA par produit.
 
 Carte géographique : CA par pays.
 
-5️⃣ Résultats et insights
+# 5️⃣ Résultats et insights
 
 CA total : ~8,2 millions sur 1 an.
 
@@ -161,7 +165,7 @@ Géographie : Royaume-Uni = marché principal, mais ventes aussi en Europe et ho
 
 Saisonnalité : pic de ventes observé avant Noël (novembre-décembre).
 
-6️⃣ Conclusion
+# 6️⃣ Conclusion
 
 Ce projet démontre la mise en place d’un pipeline complet de bout en bout :
 
